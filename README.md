@@ -49,36 +49,6 @@ The SQL schema is in `database.sql`.
 - `students <-> subjects` : M:N (implemented through `attendance`)
   - Many students attend many subjects.
 
-## ER Diagram
-
-```mermaid
-erDiagram
-    STUDENTS ||--o{ ATTENDANCE : has
-    SUBJECTS ||--o{ ATTENDANCE : contains
-
-    STUDENTS {
-        int student_id PK
-        string name
-        string usn UNIQUE
-        string department
-        int semester
-    }
-
-    SUBJECTS {
-        int subject_id PK
-        string subject_name
-        string faculty_name
-    }
-
-    ATTENDANCE {
-        int attendance_id PK
-        int student_id FK
-        int subject_id FK
-        date date
-        enum status
-    }
-```
-
 ## Normalization (Up to 3NF)
 
 - 1NF:
