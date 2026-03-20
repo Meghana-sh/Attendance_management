@@ -1,0 +1,5 @@
+# Local database runtime files
+.mysql-dev/
+*.pid
+*.err
+
